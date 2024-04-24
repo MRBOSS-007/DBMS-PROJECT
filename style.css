@@ -1,0 +1,125 @@
+body {
+    background-color: #F5F5F5;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Decreased height */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.img-fluid {
+    width: 100%;
+    height:100%; /* Decreased image size to 70vh */
+    object-fit: cover; 
+}   
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 80%; /* Adjust the width of the text box */
+    max-width: 400px; /* Maximum width for responsiveness */
+    font-size: 24px; /* Increased font size */
+    animation: slide-in 1s ease-out; /* Added animation */
+    animation-delay: 0.5s; /* Delay animation for better effect */
+    animation-fill-mode: forwards; /* Keep the final state of animation */
+    opacity: 0; /* Start with opacity 0 */
+}
+
+@keyframes slide-in {
+    from {
+        transform: translate(-50%, -50%) scale(0.5); /* Initial scale and position */
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1); /* Final scale and position */
+        opacity: 1;
+    }
+}
+
+.card {
+    transform: scale(0.8); /* Decrease size by 20% */
+    margin-left: 50px; /* Start the card 50px from the left margin */
+    margin-right: 20px; /* Add spacing between cards */
+}
+
+.custom-card {
+    width: 30vw; /* Set card size to 200px */
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.custom-card:hover .hover-text {
+    opacity: 1;
+}
+
+.side-image-container {
+    width: 105%; /* Make it 5% bigger than the card */
+    height: 70vh; /* Same height as the image-container */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.side-img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the entire container */
+    object-fit: cover;
+}
+
+.side-text-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    height: 70vh; /* Same height as the image-container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.contact-form-container {
+    background-color: #F8F9FA; /* Set background color for the contact form */
+    width: 40vw; /* Set width of the contact form */
+    height: 50vh; /* Set height of the contact form */
+    margin: 0 auto; /* Center the contact form horizontally */
+    padding: 20px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
