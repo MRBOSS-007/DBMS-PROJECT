@@ -12,7 +12,22 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
+.username-display {
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 14px; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  }
+  
+  .username-display:before {
+    content: "\f007"; /* Unicode for user icon */
+    font-family: "Font Awesome 5 Free"; /* Use Font Awesome for icons */
+    margin-right: 5px; /* Add margin to the right of the icon */
+  }
+  
 /* Style the logout button */
 .container .logout-btn {
     padding: 10px 20px;

@@ -12,18 +12,22 @@ if (isset($_POST['signup'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO user (username, email, usertype,password) VALUES ('$username', '$email','student', '$password')";
-    $result = mysqli_query($data, $sql);
-    if ($result)
+    $sql1 = "INSERT INTO  registration (username, email,password) VALUES ('$username', '$email', '$password')";
+    $result1 = mysqli_query($data, $sql1);
+
+    $sql2 = "INSERT INTO user (username, email,usertype,password) VALUES ('$username', '$email', 'student','$password')";
+    $result2 = mysqli_query($data, $sql2);
+
+    if ($result1&& $result2)
      {
         $message ="sign up succesfull";
-                      $_SESSION['signMessage']= $message;
+                     echo $_SESSION['signMessage']= $message;
 
                       header("location:index.php");
     }
      else {
         $message ="sign up unsuccesfull";
-        $_SESSION['signMessage']= $message;
+       echo $_SESSION['signMessage']= $message;
 
         header("location:index.php");
     }

@@ -11,6 +11,7 @@ session_start();
         header("location:login.php");
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,19 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>student Panel</title>
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<div class="username-display">
+    <?php
+    session_start(); // Start the session to access session variables
+
+    // Check if the session variable exists and echo the username
+    if (isset($_SESSION['username'])) {
+      echo 'Logged in as: ' . $_SESSION['username'];
+    }
+    ?>
+  </div>
     <div class="container">
         <div class="navbar">
         <button class="toggle-btn">Toggle Sidebar</button>
@@ -29,11 +41,12 @@ session_start();
         </div>
     
         <div class="sidebar" id="sidebar">
-            <a href="add_student.php">Add Student deatil</a>
-            <a href="view_student.php">View Student deatils</a>
-            <a href="add_arts_activity.php">Add Arts skill</a>
-            <a href="add_sports_activity.php">Add Sports skill</a>
-        </div>
+
+            <a href="registor_studen.php">registor</a>
+            <a href="view_studnent.php">View Student deatils</a>
+            <a href="arts_activity.php">Add Arts skill</a>
+            <a href="sports_activity.php">Add Sports skill</a>
+        </div>      
     
         <div class="content">
             <!-- Your main content here -->
